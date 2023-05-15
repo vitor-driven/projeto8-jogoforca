@@ -41,9 +41,9 @@ export default function App() {
                     <button className="newWordButton" onClick={NewWord}>
                         Escolher Palavra
                     </button>
-                </div>
-                <div className="Forca-word">
-                    <Word word={word} />
+                    <div className="Forca-word">
+                        <Word word={word} />
+                    </div>
                 </div>
             </div>
             <Letters />
