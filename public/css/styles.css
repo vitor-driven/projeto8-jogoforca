@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.App-top {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+img {
+    width: 400px;
+}
+
+.Keyboard { 
+    display: flex;
+    justify-content: center;
+    width: 676px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.Keyboard button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #e1ecf4;
+    color: #39739d;
+    border: 1px solid #7aa7c7;
+    border-radius: 3px;
+    font-weight: bold;
+    margin: 6px;
+}
+
+.newWordButton {
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    background-color: #27ae60;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 30px;
+}

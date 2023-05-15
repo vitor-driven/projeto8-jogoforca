@@ -1,21 +1,23 @@
-import styled from "styled-components";
-import GlobalStyle from "./GlobalStyle";
-import React from "react";
+import React, { useState } from "react";
 
-const Keyboard = ({ onClick }) => {
-    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-    const row1 = alphabet.slice(0, 13);
-    const row2 = alphabet.slice(13, 26);
+export default function Keyboard({ word }) {
+    const [guessedLetters, setGuessedLetters] = useState([]);
+
+    const letterClick = (letter) => {
+        if (word.includes(letter)) {
+            setGuessedLetters([...guessedLetters, letter]);
+        }
+    };
+
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
     return (
         <div className="Keyboard">
             {alphabet.map((letter) => (
-                <button key={letter} onClick={() => onClick(letter)}>
+                <button key={letter} onClick={letterClick}>
                     {letter}
                 </button>
             ))}
         </div>
     );
-};
-
-export default Keyboard;
+}
