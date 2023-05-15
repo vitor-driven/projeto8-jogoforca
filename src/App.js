@@ -21,7 +21,7 @@ function App() {
     const [image, setImage] = useState(images[0]);
     const [guess, setGuesses] = useState("");
 
-    function randonWord() {
+    function randomWord() {
         let locate = Math.floor(Math.random() * palavras.length);
 
         setCont(0);
@@ -40,11 +40,9 @@ function App() {
     }
 
     function contErrors(letra) {
-        if (
-            !Answer.normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "")
-                .includes(letra)
-        ) {
+        Answer = Answer.normalize("NFD");
+        Answer = Answer.replace(/[\u0300-\u036f]/g, "");
+        if (!Answer.includes(letra)) {
             const newCont = cont + 1;
             setCont(newCont);
             setImage(images[newCont]);
@@ -57,7 +55,7 @@ function App() {
             <Forca
                 word={word}
                 setWord={() => {
-                    setWord(randonWord(), compare());
+                    setWord(randomWord(), compare());
                     setSelect([]);
                 }}
                 image={image}

@@ -1,4 +1,4 @@
-export default function JForca(props) {
+export default function Forca(props) {
     const { word, setWord, image, cont, count, select } = props;
 
     return (
@@ -14,7 +14,7 @@ export default function JForca(props) {
                             {word}
                         </div>
                     ) : (
-                        <div className="Forca-word black" data-test="word">
+                        <div className="Forca-word" data-test="word">
                             {word.split("").map((letra) => {
                                 return select.includes(
                                     letra
@@ -27,7 +27,7 @@ export default function JForca(props) {
                         </div>
                     )
                 ) : (
-                    <div className="Forca-word" data-test="word">
+                    <div className="Forca-word red" data-test="word">
                         {word}
                     </div>
                 )}
