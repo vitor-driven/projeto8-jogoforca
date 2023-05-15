@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .App {
@@ -61,8 +62,13 @@ img {
     font-weight: bold;
     margin: 6px;
 }
+.Keyboard button:disabled{
+    color: #798A9F;
+    background: #9FAAB5;;
+    border: 1px solid #7AA7C7;
+}
 
-.newWordButton {
+.App-right button {
     display: flex;
     border: none;
     align-items: center;
